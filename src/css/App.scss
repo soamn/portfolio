@@ -1,0 +1,516 @@
+//Media query
+@mixin respond($breakpoint) {
+  @if ($breakpoint == medium) {
+    @media (max-width: 768px) {
+      @content;
+    }
+  }
+}
+//ANIMATIONS
+
+@keyframes iconAnimate {
+  50% {
+    // transform: rotate(990deg);
+    transform: scale(0.9);
+  }
+}
+@keyframes swing-down1 {
+  0% {
+    height: 1vh;
+  }
+  80% {
+    height: 35vh;
+  }
+  100% {
+    height: 30vh;
+  }
+}
+@keyframes swing-down2 {
+  0% {
+    height: 10vh;
+  }
+  80% {
+    height: 45vh;
+  }
+  100% {
+    height: 40vh;
+  }
+}
+@keyframes rotate {
+  33% {
+    transform: rotate(2deg);
+  }
+  66% {
+    transform: rotate(-2deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+// CSS
+.sidebar {
+  background-color: rgb(30, 30, 31);
+  height: 100vh;
+  width: 70px;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 20px;
+  z-index: 2;
+  @include respond(medium) {
+    width: 50px;
+  }
+}
+.nav-icons,
+.link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: transparent;
+}
+
+.nav-icon {
+  height: 50px;
+  width: 50px;
+  color: rgb(107, 104, 104);
+  background-color: transparent;
+  margin: 30px;
+  @include respond(medium) {
+    width: 30px;
+    margin: 15px;
+  }
+}
+
+.nav-icon :hover {
+  color: rgb(213, 232, 41);
+  animation: iconAnimate 1s linear infinite;
+
+  transform-origin: center;
+}
+
+.socials {
+  @extend .nav-icons;
+}
+.social-icon {
+  @extend .nav-icon, .nav-icons;
+  height: 32px;
+  background-color: transparent;
+  width: 24px;
+  margin: 10px;
+  @include respond(medium) {
+    width: 16px;
+    margin: 5px;
+  }
+}
+
+.menu-btn {
+  @extend .nav-icon, .nav-icons;
+
+  position: fixed;
+  background-color: transparent;
+  border: 0;
+  width: 40px;
+  height: 50px;
+  top: 0;
+  left: 1px;
+  margin: 0;
+
+  @include respond(medium) {
+    width: 30px;
+  }
+}
+.close-btn {
+  @extend .menu-btn;
+  position: fixed;
+  left: 35px;
+  width: 25px;
+  @include respond(medium) {
+    left: 15px;
+  }
+}
+
+.container {
+  position: absolute;
+  left: 15vw;
+  background-color: transparent;
+  @include respond(medium) {
+    left: 15vw;
+  }
+}
+
+.line {
+  background-color: white;
+  position: relative;
+  top: 0;
+  width: 1px;
+  height: 30vh;
+  margin: 0 auto;
+  animation: swing-down1 1s linear;
+}
+
+.container2 {
+  left: 35vw;
+  position: absolute;
+  z-index: -1;
+  text-align: center;
+  background-color: transparent;
+}
+.container2 .line {
+  height: 40vh;
+  animation: swing-down2 1s linear;
+}
+
+.content h1,
+.skills h2 {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: transparent;
+  color: rgb(155, 152, 152);
+  font-size: 40px;
+  transition: color 1s, font-size 0.1s;
+  animation: rotate 2s linear infinite 1s;
+  @include respond(medium) {
+    font-size: 20px;
+  }
+}
+
+.content h1:hover,
+.skills h2:hover {
+  color: yellow;
+  font-size: 48px;
+  cursor: none;
+
+  @include respond(medium) {
+    font-size: 25px;
+  }
+}
+.content h1:active {
+  transform: rotate(360deg);
+  color: orangered;
+}
+.skill-iconR {
+  margin: 10px;
+  height: 50px;
+  width: 50px;
+  border-radius: 20%;
+  padding: 5px;
+  color: rgba(68, 192, 223, 0.59);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  top: 20px;
+  animation: glow1 2s linear infinite;
+
+  @include respond(medium) {
+    margin: 5px;
+    height: 30px;
+    width: 40px;
+  }
+}
+@keyframes glow1 {
+  100% {
+    color: rgb(36, 189, 227, 1);
+  }
+}
+.skill-iconR:hover {
+  color: rgba(253, 253, 253);
+  cursor: grab;
+}
+.skill-iconR:active {
+  color: rgb(36, 189, 227, 1);
+  box-shadow: 0 0 20px rgba(36, 189, 227, 0.9);
+  cursor: none;
+}
+
+.skill-iconJ {
+  @extend .skill-iconR;
+  color: rgb(242, 242, 7, 0.4);
+  animation: glow2 4s linear infinite;
+}
+@keyframes glow2 {
+  100% {
+    color: rgb(242, 242, 7, 0.8);
+  }
+}
+
+.skill-iconJ:active {
+  color: rgb(242, 242, 7, 0.8);
+  box-shadow: 0 0 20px rgb(242, 242, 7, 1);
+}
+.skill-iconH {
+  @extend .skill-iconR;
+  color: rgba(242, 148, 7, 0.4);
+  animation: glow3 3s linear infinite;
+}
+@keyframes glow3 {
+  100% {
+    color: rgb(242, 148, 7, 0.8);
+  }
+}
+.skill-iconH:active {
+  color: rgb(242, 148, 7, 0.8);
+  box-shadow: 0 0 20px rgb(242, 142, 7, 0.6);
+}
+.skills {
+  position: fixed;
+  justify-content: space-around;
+  bottom: 10%;
+  left: 40%;
+
+  @include respond(medium) {
+    bottom: 2%;
+    left: 25%;
+  }
+}
+.card-container {
+  position: absolute;
+  top: 50%;
+  left: 10%;
+  border-radius: 50px;
+}
+.card-slideshow {
+  max-width: 400px;
+  margin: 0 auto;
+  overflow: hidden;
+  border-radius: 48px;
+}
+.card-slide {
+  white-space: nowrap;
+  transition: ease 1000ms;
+}
+.card-slide:hover {
+  transition: 60s;
+}
+
+.card {
+  color: rgb(0, 0, 0);
+  background: linear-gradient(-30deg, black, rgb(200, 196, 196));
+  width: 100%;
+  height: 300px;
+  padding: 20px;
+  display: inline-block;
+  border-radius: 50px;
+  @include respond((medium)) {
+    height: 200px;
+  }
+}
+.card:hover {
+  transform: rotate3d(1, 1, 0, 30deg);
+  color: white;
+  text-decoration: underline;
+}
+.card h2 {
+  text-align: center;
+  background-color: transparent;
+
+  @include respond((medium)) {
+    font-size: 16px;
+  }
+}
+.card p {
+  background: transparent;
+  width: 80%;
+  text-wrap: wrap;
+  font-size: 20px;
+  font-family: cursive;
+  position: absolute;
+  @include respond((medium)) {
+    font-size: 14px;
+  }
+}
+
+.card-dots {
+  text-align: center;
+}
+.card-dot {
+  display: inline-block;
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+  margin: 15px 7px 0px;
+  background-color: #434343;
+}
+.card-dot.active {
+  background-color: rgb(195, 192, 192);
+  border: 0.5px solid #434343;
+}
+.card-dot:hover {
+  height: 15px;
+  width: 15px;
+  background-color: rgb(0, 0, 0);
+}
+
+.img-container {
+  width: 500px;
+  position: absolute;
+  right: 5%;
+  top: 30%;
+
+  @include respond((medium)) {
+    width: 100px;
+    top: 5%;
+  }
+}
+.image-slideshow {
+  @extend .card-slideshow;
+  max-width: 500px;
+}
+.image-slide {
+  @extend .card-slide;
+  transition: ease-in-out 2000ms;
+}
+.tile-container {
+  margin: 0px auto;
+}
+
+.tile-slideshow {
+  @extend .card-slideshow;
+  max-width: 45vw;
+
+  @include respond((medium)) {
+    max-width: 90vw;
+  }
+}
+.tile-slide {
+  white-space: nowrap;
+  animation: slide 9s infinite ease;
+  transform: translate3d(0%, 0, 0);
+}
+@keyframes slide {
+  33% {
+    transform: translate3d(0%, 0, 0);
+  }
+  50% {
+    transform: translate3d(-100%, 0, 0);
+  }
+  70% {
+    transform: translate3d(-100%, 0, 0);
+  }
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+}
+.tile-slide:hover {
+  animation-play-state: paused;
+  cursor: grab;
+  @include respond((medium)) {
+    animation-play-state: running;
+  }
+}
+.tile {
+  display: inline-block;
+  width: 100%;
+  margin: 40px;
+  text-align: center;
+  color: rgb(177, 172, 172);
+}
+.tile p {
+  text-wrap: wrap;
+  letter-spacing: 2px;
+  word-spacing: 5px;
+  padding: 40px;
+  text-transform: capitalize;
+  @include respond((medium)) {
+    font-size: 14px;
+
+    padding: 10px;
+  }
+}
+.tile img {
+  width: 800px;
+  border-radius: 30px;
+  height: 500px;
+  cursor: pointer;
+  @include respond((medium)) {
+    width: 300px;
+    height: 200px;
+  }
+}
+
+.tile:hover {
+  color: white;
+}
+.Repo-links {
+  display: flex;
+  width: 100%;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 5px;
+  padding: 5px;
+}
+.outer {
+  width: 300px;
+  height: 50px;
+  background-color: rgb(27, 25, 25);
+  border-radius: 10px;
+  color: rgb(254, 254, 254);
+  padding: 20px;
+  box-shadow: rgb(47, 47, 47) 5px 5px 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  @include respond((medium)) {
+    width: 150px;
+    height: 50px;
+  }
+}
+
+.outer h3 {
+  background-color: transparent;
+  display: inline;
+  @include respond((medium)) {
+    font-size: 10px;
+  }
+}
+.ext-icon {
+  background-color: transparent;
+  width: 25px;
+  height: 25px;
+  display: inline;
+  color: white;
+  @include respond((medium)) {
+    width: 15px;
+    height: 15px;
+  }
+}
+.ext-icon:hover {
+  color: rgb(5, 122, 255);
+}
+.about-container {
+  width: 100%;
+  position: absolute;
+  top: 40%;
+  left: 35%;
+  @include respond(medium) {
+    left: 20%;
+  }
+}
+.about {
+  width: 500px;
+  background-color: rgb(37, 36, 36);
+  border: 1px solid;
+  box-shadow: rgb(45, 45, 45) -5px -5px 10px;
+  height: 100px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  word-spacing: 5px;
+  letter-spacing: 1px;
+  @include respond(medium) {
+    width: 70vw;
+  }
+}
+.about p {
+  background-color: transparent;
+  color: #adadad;
+}
+
+.about:hover {
+  box-shadow: rgb(45, 45, 45) 5px 5px 10px;
+}
+.about a {
+  background-color: transparent;
+}
