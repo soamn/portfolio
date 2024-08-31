@@ -109,9 +109,9 @@ function Projects() {
             <ReactSimplyCarousel
               activeSlideIndex={activeSlideIndex}
               onRequestChange={setActiveSlideIndex}
-              // autoplay={true}
+              autoplay={true}
               autoplayDirection="forward"
-              autoplayDelay={5000}
+              autoplayDelay={10000}
               itemsToShow={1}
               itemsToScroll={1}
               speed={300}
@@ -203,7 +203,7 @@ function Projects() {
               activeSlideIndex === 0 ? " bg-white text-black" : ""
             } rounded-lg ring-2 ring-slate-300 p-2 hover:[bg-white text-black]`}
           >
-            TradeRay
+            <a href="/Projects/project1"> TradeRay</a>
           </span>
           <span
             onClick={() => {
@@ -213,7 +213,7 @@ function Projects() {
               activeSlideIndex === 1 ? " bg-white text-black" : ""
             } rounded-lg ring-2 ring-slate-300 p-2 hover:[bg-white text-black]`}
           >
-            Apple Detect
+            <a href="/Projects/project2">Apple Detect</a>
           </span>
           <span
             onClick={() => {
@@ -223,7 +223,7 @@ function Projects() {
               activeSlideIndex === 2 ? " bg-white text-black" : ""
             } rounded-lg ring-2 ring-slate-300 p-2  hover:[bg-white text-black]`}
           >
-            GierList-Live
+            <a href="/Projects/project3"> GierList</a>
           </span>
         </motion.div>
       </div>

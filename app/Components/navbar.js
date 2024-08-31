@@ -28,7 +28,7 @@ const Navbar = () => {
         <motion.a
           whileHover={{ scale: 1.2 }}
           className="cursor-pointer"
-          href="/Projects
+          href="/Contact
         "
         >
           Contact
@@ -36,7 +36,7 @@ const Navbar = () => {
         <motion.a
           whileHover={{ scale: 1.2 }}
           className="cursor-pointer"
-          href="/contact"
+          href="/"
         >
           Blog
         </motion.a>
