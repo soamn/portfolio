@@ -159,20 +159,20 @@ function Projects() {
               <div className="w-[370px]   h-[541px] overflow-hidden  rounded-lg md:w-[700px] ">
                 <a href="/Projects/project1" className="w-full h-full">
                   <Image
-                    src="/p1img.png"
+                    src="/traderay.png"
                     width={900}
-                    height={900}
-                    className="w-full h-full rounded-lg"
+                    height={500}
+                    className="w-full h-full rounded-lg object-contain"
                   />
                 </a>
               </div>
               <div className="w-[370px] h-[541px] overflow-hidden rounded-lg  md:w-[700px]">
                 <a href="/Projects/project2" className="w-full h-full">
                   <Image
-                    src="/p2img.png"
+                    src="/project2.png"
                     width={900}
                     height={500}
-                    className="w-full rounded-lg"
+                    className="w-full rounded-lg object relative top-[30%]"
                   />
                 </a>
               </div>
