@@ -36,7 +36,7 @@ const Navbar = () => {
         <motion.a
           whileHover={{ scale: 1.2 }}
           className="cursor-pointer"
-          href="https://soblogs-p8qizzoaq-soamns-projects.vercel.app/"
+          href="https://soblogs.vercel.app/"
         >
           Blog
         </motion.a>

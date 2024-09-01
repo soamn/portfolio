@@ -12,7 +12,7 @@ const Project2 = () => {
       </a>
       <header className=" flex gap-10 text-blue-600  p-4">
         <a
-          href="https://soblogs-p8qizzoaq-soamns-projects.vercel.app/posts/livestreaming-app"
+          href="https://soblogs.vercel.app/posts/livestreaming-app"
           className="flex gap-1 hover:text-blue-900 "
         >
           <FaArrowRight className="-rotate-45" /> vist blog
@@ -78,7 +78,7 @@ const Project2 = () => {
         </div>
         <footer className=" flex gap-10 text-blue-600 mb-10 ">
           <a
-            href="https://soblogs-p8qizzoaq-soamns-projects.vercel.app/posts/livestreaming-app"
+            href="https://soblogs.vercel.app/posts/livestreaming-app"
             className="flex gap-1 hover:text-blue-900"
           >
             <FaArrowRight className="-rotate-45" /> vist blog
