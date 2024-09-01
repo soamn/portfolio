@@ -24,10 +24,16 @@ const Project1 = () => {
       />
       {/* Header */}
       <header className="flex flex-col sm:flex-row gap-4 sm:gap-10 text-blue-600 p-4">
-        <a href="/" className="flex gap-1 hover:text-blue-900">
+        <a
+          href="https://soblogs-p8qizzoaq-soamns-projects.vercel.app/posts/traderay"
+          className="flex gap-1 hover:text-blue-900"
+        >
           <FaArrowRight className="-rotate-45" /> Visit Blog
         </a>
-        <a href="/" className="flex gap-1 hover:text-blue-900">
+        <a
+          href="https://github.com/soamn/Traderay"
+          className="flex gap-1 hover:text-blue-900"
+        >
           <FaArrowRight className="-rotate-45" />
           Visit Source Code
         </a>
@@ -85,10 +91,16 @@ const Project1 = () => {
 
         {/* Footer */}
         <footer className="flex flex-col sm:flex-row gap-4 sm:gap-10 text-blue-600 mt-10 mb-4">
-          <a href="/" className="flex gap-1 hover:text-blue-900">
+          <a
+            href="https://soblogs-p8qizzoaq-soamns-projects.vercel.app/posts/traderay"
+            className="flex gap-1 hover:text-blue-900"
+          >
             <FaArrowRight className="-rotate-45" /> Visit Blog
           </a>
-          <a href="/" className="flex gap-1 hover:text-blue-900">
+          <a
+            href="https://github.com/soamn/Traderay"
+            className="flex gap-1 hover:text-blue-900"
+          >
             <FaArrowRight className="-rotate-45" />
             Visit Source Code
           </a>

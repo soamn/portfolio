@@ -11,10 +11,16 @@ const Project2 = () => {
         <FaArrowRight className="absolute left-5 rotate-180 text-2xl text-blue-700" />{" "}
       </a>
       <header className=" flex gap-10 text-blue-600  p-4">
-        <a href="/" className="flex gap-1 hover:text-blue-900 ">
+        <a
+          href="https://soblogs-p8qizzoaq-soamns-projects.vercel.app/posts/livestreaming-app"
+          className="flex gap-1 hover:text-blue-900 "
+        >
           <FaArrowRight className="-rotate-45" /> vist blog
         </a>
-        <a href="/" className="flex gap-1 hover:text-blue-900">
+        <a
+          href="https://github.com/soamn/gierlist"
+          className="flex gap-1 hover:text-blue-900"
+        >
           <FaArrowRight className="-rotate-45" />
           visit source code
         </a>
@@ -71,10 +77,16 @@ const Project2 = () => {
           </div>
         </div>
         <footer className=" flex gap-10 text-blue-600 mb-10 ">
-          <a href="/" className="flex gap-1 hover:text-blue-900">
+          <a
+            href="https://soblogs-p8qizzoaq-soamns-projects.vercel.app/posts/livestreaming-app"
+            className="flex gap-1 hover:text-blue-900"
+          >
             <FaArrowRight className="-rotate-45" /> vist blog
           </a>
-          <a href="/" className="flex gap-1 hover:text-blue-900">
+          <a
+            href="https://github.com/soamn/gierlist"
+            className="flex gap-1 hover:text-blue-900"
+          >
             <FaArrowRight className="-rotate-45" />
             visit source code
           </a>
