@@ -1,12 +1,22 @@
 "use client";
+import React, { useEffect, useState } from "react";
+
 import { motion } from "framer-motion";
-import React from "react";
+
 import { FaLinkedin, FaGithub, FaTwitter } from "react-icons/fa";
 import { FaLocationDot } from "react-icons/fa6";
-function Contact() {
+function Contact(props) {
+  const [mode, setMode] = useState("mygradient");
+  useEffect(() => {
+    setMode(localStorage.getItem("mode"));
+  }, []);
   return (
     <>
-      <motion.div className=" w-full h-screen p-5 flex overflow-hidden  justify-center flex-col items-center text-white  relative bg-gradient-to-r from-slate-800 to-slate-950 z-30  ">
+      <motion.div
+        className={`${
+          props.mode ? `bg-${props.mode}` : `bg-${mode}`
+        }  w-full h-screen p-5 flex overflow-hidden  justify-center flex-col items-center   relative  text-white  `}
+      >
         <motion.h1
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}

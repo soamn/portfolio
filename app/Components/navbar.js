@@ -9,7 +9,7 @@ const Navbar = () => {
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{ duration: 0.5 }}
-        className="  w-screen p-4  absolute top-[80%] text-white flex  gap-10 lg:gap-32 justify-center text-lg  "
+        className="  w-screen p-4  absolute top-[80%] text-white flex  gap-10 lg:gap-32 justify-center text-lg   "
       >
         <motion.a
           whileHover={{ scale: 1.2 }}

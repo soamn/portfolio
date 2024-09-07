@@ -33,8 +33,9 @@ const Project2 = () => {
           " Create and Discover Livestreams on this platform"
         </h1>
         <Image
+          alt="image"
           src="/gierlisticon.png"
-          width={900}
+          width={500}
           height={500}
           className="w-60  h-48 rounded-lg"
         />
@@ -44,6 +45,7 @@ const Project2 = () => {
           using OBS .
         </p>
         <Image
+          alt="image"
           src="/p3img1.png"
           width={900}
           height={500}
@@ -55,7 +57,9 @@ const Project2 = () => {
           frontend , each livestream is unique and is created using a streamKey
           that is unique to each user.
         </p>
+        alt="image"
         <Image
+          alt="image"
           src="/p3img2.png"
           width={800}
           height={500}

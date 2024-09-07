@@ -25,7 +25,7 @@ export default function HomePage() {
 
   return (
     <>
-      <div className=" h-screen z-0 " onMouseMove={handleMouseMove}>
+      <div className=" h-screen  " onMouseMove={handleMouseMove}>
         {/*  div for large screens */}
         <div className="  w-fit  relative top-1/4 lg:left-[30%] left-[10%]  invisible md:visible  ">
           <motion.div
@@ -33,7 +33,7 @@ export default function HomePage() {
             whileHover={{ scale: 1.05 }}
             whileInView={{ opacity: 1 }}
             whileTap={{ scale: 0.9 }}
-            transition={{ duration: 0.5 }}
+            transition={{ duration: 0.2 }}
             className={` w-fit text-white ring-slate-400 ring-2 rounded-xl p-5   `}
           >
             <span className="text-sm text-blue-600 font-extralight opacity-40   select-none">

@@ -10,13 +10,16 @@ const Project1 = () => {
         <FaArrowRight className="absolute left-5 rotate-180 text-2xl text-blue-700" />{" "}
       </a>
       {/* Background icons */}
+
       <Image
+        alt="image"
         src="/auth.png"
         width={400}
         height={500}
         className="absolute w-fit h-1/2 left-0 top-[70%] lg:block hidden"
       />
       <Image
+        alt="image"
         src="/order.png"
         width={400}
         height={500}
@@ -48,6 +51,7 @@ const Project1 = () => {
           "Trade Your Opinions, Profit from Predictions."
         </h2>
         <Image
+          alt="image"
           src="/tradeicon.svg"
           width={500}
           height={500}
@@ -67,6 +71,7 @@ const Project1 = () => {
           </em>
         </p>
         <Image
+          alt="image"
           src="/eventDetail.png"
           width={900}
           height={500}

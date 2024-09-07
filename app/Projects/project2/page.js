@@ -42,6 +42,7 @@ const Project2 = () => {
           golden-delicious,mc-intosh etc.)
         </p>
         <Image
+          alt="image"
           src="/p2img1.png"
           width={900}
           height={500}
@@ -54,6 +55,7 @@ const Project2 = () => {
           enable seamless image detection directly in web browsers.
         </p>
         <Image
+          alt="image"
           src="/p2img2.jpg"
           width={800}
           height={500}

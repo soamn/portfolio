@@ -1,18 +1,23 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.bg-mygradient {
+  background-image: linear-gradient(to right, #1e293b, #0f172a);
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   scrollbar-width: auto;
-  scrollbar-color: #ffffff #0c1324;
+  scrollbar-color: #ffffff dark;
   scroll-behavior: smooth;
 }
 
 /* Chrome, Edge, and Safari */
 *::-webkit-scrollbar {
-  width: 16px;
+  width: 10px;
 }
 
 *::-webkit-scrollbar-track {
@@ -20,7 +25,7 @@
 }
 
 *::-webkit-scrollbar-thumb {
-  background-color: #616161;
+  background-color: #252222;
   border-radius: 10px;
-  border: 3px solid #ffffff;
+  border: none;
 }

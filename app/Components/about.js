@@ -22,7 +22,7 @@ export const About = () => {
         }}
       ></div>
 
-      <div className="w-full  top-[5%]  flex  absolute justify-center gap-20  z-0">
+      <div className="w-full flex  relative top-[-30%] justify-center gap-20  z-0">
         <div
           className={`${
             dialog === 2 ? "bg-white text-black " : ""
@@ -31,7 +31,6 @@ export const About = () => {
         >
           Education
         </div>
-
         <div
           className={` ${
             dialog === 1 ? "bg-white text-black" : ""
