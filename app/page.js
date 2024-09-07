@@ -27,7 +27,9 @@ export default function Home() {
     <>
       <Navbar />
       <main
-        className={` bg-${mode} snap-y snap-mandatory overflow-y-scroll h-screen overflow-x-clip ] text-white `}
+        className={` ${
+          mode === "dark" ? "bg-dark" : "bg-mygradient"
+        } snap-y snap-mandatory overflow-y-scroll h-screen overflow-x-clip ] text-white `}
       >
         <div className="absolute top-2 left-[80%]  gap-4 flex z-50 ">
           <button
