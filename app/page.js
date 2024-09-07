@@ -21,7 +21,6 @@ export default function Home() {
   }, []);
   useEffect(() => {
     localStorage.setItem("mode", mode);
-    
   }, [mode]);
 
   return (
